@@ -1,8 +1,8 @@
 <template>
   <form @submit.prevent="handleSubmit">
-    <label>Title:</label>
+    <label>Title</label>
     <input type="text" v-model="title" required />
-    <label>Details:</label>
+    <label>Details</label>
     <textarea v-model="details" required></textarea>
     <button>Add Project</button>
   </form>
@@ -22,7 +22,9 @@ export default {
         title: this.title,
         details: this.details,
         complete: false,
+        id: Math.floor(Math.random() * 10000),
       };
+      console.log(project);
 
       fetch("http://localhost:3000/projects", {
         method: "POST",

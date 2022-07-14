@@ -3,8 +3,8 @@
     <div class="actions">
       <h3 @click="showDetails = !showDetails">{{ project.title }}</h3>
       <div class="icons">
-        <span class="material-icons">edit</span>
         <span @click="deleteProject" class="material-icons">delete</span>
+        <span class="material-icons">edit</span>
         <span @click="toggleComplete" class="material-icons tick">done</span>
       </div>
     </div>
@@ -44,7 +44,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .project {
   margin: 20px auto;
   background: white;
